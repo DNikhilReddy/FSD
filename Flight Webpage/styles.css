@@ -1,0 +1,317 @@
+/* ================= RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9fafc;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* HEADER  */
+
+.header {
+  background: #0d47a1;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffcc00;
+}
+
+/* Mobile Menu */
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  background: linear-gradient(to right, #64b5f6, #1976d2);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.badge {
+  background: #ff5252;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #ffb300;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: #1976d2;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #0d47a1;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+  padding: 70px 0;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: #f5f7fa;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+}
+
+
+/* ================= PRICING ================= */
+
+.pricing {
+  padding: 70px 0;
+  background: #eef2f7;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.price-card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.price-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.featured {
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 20px rgba(255,204,0,0.6);
+}
+
+.recommend {
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  background: #ffcc00;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 32px;
+  margin: 15px 0;
+  color: #1a3c5e;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.price-card li {
+  margin-bottom: 10px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #0d47a1;
+  color: white;
+  padding: 50px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+}
+
+.footer a:hover {
+  color: #ffcc00;
+}
+
+copyright {
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  /* Navigation */
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #0d47a1;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav {
+    display: block;
+  }
+
+  /* Grids */
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+}
